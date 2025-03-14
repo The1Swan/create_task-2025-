@@ -48,5 +48,10 @@ def play_game():
         if play_again.lower() == "no":
             print("Thanks for playing!")
             break
+        elif play_again.lower() == "yes":
+            continue
+        else:
+            print("Not Aplicable")
+            break
 
 play_game()
