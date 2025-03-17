@@ -4,33 +4,45 @@ game_master_moves = ['rock', 'paper', 'scissors']
 def decide_winner(player, game_master):
     winner = ''
 
-    if player == "rock" and game_master == 'paper':
-        winner = 'Game Master'
-    elif player == "rock" and game_master == 'scissors':
-        winner = 'player'
-    elif player == "rock" and game_master == 'rock':
-        winner = 'nobody'
-   
-    elif player == "paper" and game_master == 'paper':
-        winner = 'nobody'
-    elif player == "paper" and game_master == 'scissors':
-        winner = 'Game Master'
-    elif player == "paper" and game_master == 'rock':
-        winner = 'player'
-   
-    elif player == "scissors" and game_master == 'paper':
-        winner = 'player'
-    elif player == "scissors" and game_master == 'scissors':
-        winner = 'nobody'
-    elif player == "scissors" and game_master == 'rock':
-        winner = 'Game Master'
+    while True:
+        if player == "rock" and game_master == 'paper':
+            winner = 'Game Master'
+            break
+        elif player == "rock" and game_master == 'scissors':
+            winner = 'player'
+            break
+        elif player == "rock" and game_master == 'rock':
+            winner = 'nobody'
+            break
     
-    elif player == "blaster":
-        winner = 'player'
+        elif player == "paper" and game_master == 'paper':
+            winner = 'nobody'
+            break
+        elif player == "paper" and game_master == 'scissors':
+            winner = 'Game Master'
+            break
+        elif player == "paper" and game_master == 'rock':
+            winner = 'player'
+            break
     
-    else:
-        winner = 'nobody'
-        print("Error, no winner")
+        elif player == "scissors" and game_master == 'paper':
+            winner = 'player'
+            break
+        elif player == "scissors" and game_master == 'scissors':
+            winner = 'nobody'
+            break
+        elif player == "scissors" and game_master == 'rock':
+            winner = 'Game Master'
+            break
+        
+        elif player == "blaster":
+            winner = 'player'
+            break
+        
+        else:
+            winner = 'nobody'
+            print("Error, no winner")
+            break
 
     print(f'The winner is: {winner}')
 
